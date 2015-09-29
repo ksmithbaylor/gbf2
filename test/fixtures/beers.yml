@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distributor: MyString
+  brewery: MyString
+  product: MyString
+  draft: false
+  quantity: MyString
+  notes: MyString
+  rep: MyString
+  image: MyString
+  location: MyString
+
+two:
+  distributor: MyString
+  brewery: MyString
+  product: MyString
+  draft: false
+  quantity: MyString
+  notes: MyString
+  rep: MyString
+  image: MyString
+  location: MyString

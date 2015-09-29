@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tent_type: MyString
+  jockey_box: false
+  bin: 1
+  tables: 1
+  location: MyString
+
+two:
+  tent_type: MyString
+  jockey_box: false
+  bin: 1
+  tables: 1
+  location: MyString

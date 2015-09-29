@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distributor:</strong>
+  <%= @beer.distributor %>
+</p>
+
+<p>
+  <strong>Brewery:</strong>
+  <%= @beer.brewery %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @beer.product %>
+</p>
+
+<p>
+  <strong>Draft:</strong>
+  <%= @beer.draft %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @beer.quantity %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @beer.notes %>
+</p>
+
+<p>
+  <strong>Rep:</strong>
+  <%= @beer.rep %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @beer.image %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @beer.location %>
+</p>
+
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Back', beers_path %>
