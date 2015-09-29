@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929021606) do
+ActiveRecord::Schema.define(version: 20150929125914) do
 
   create_table "beers", force: :cascade do |t|
     t.string   "distributor"
@@ -29,10 +29,14 @@ ActiveRecord::Schema.define(version: 20150929021606) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "tent_type"
-    t.boolean  "jockey_box"
-    t.integer  "bin"
-    t.integer  "tables"
     t.string   "location"
+    t.boolean  "jockey_box"
+    t.string   "bin"
+    t.string   "tables"
+    t.boolean  "completed"
+    t.string   "notes"
+    t.integer  "long"
+    t.integer  "lat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

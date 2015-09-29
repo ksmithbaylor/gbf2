@@ -2,14 +2,22 @@
 
 one:
   tent_type: MyString
-  jockey_box: false
-  bin: 1
-  tables: 1
   location: MyString
+  jockey_box: false
+  bin: MyString
+  tables: MyString
+  completed: false
+  notes: MyString
+  long: 1
+  lat: 1
 
 two:
   tent_type: MyString
-  jockey_box: false
-  bin: 1
-  tables: 1
   location: MyString
+  jockey_box: false
+  bin: MyString
+  tables: MyString
+  completed: false
+  notes: MyString
+  long: 1
+  lat: 1

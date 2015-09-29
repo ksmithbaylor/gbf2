@@ -16,20 +16,36 @@
     <%= f.text_field :tent_type %>
   </div>
   <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
     <%= f.label :jockey_box %><br>
     <%= f.check_box :jockey_box %>
   </div>
   <div class="field">
     <%= f.label :bin %><br>
-    <%= f.number_field :bin %>
+    <%= f.text_field :bin %>
   </div>
   <div class="field">
     <%= f.label :tables %><br>
-    <%= f.number_field :tables %>
+    <%= f.text_field :tables %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.label :completed %><br>
+    <%= f.check_box :completed %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :long %><br>
+    <%= f.number_field :long %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.number_field :lat %>
   </div>
   <div class="actions">
     <%= f.submit %>

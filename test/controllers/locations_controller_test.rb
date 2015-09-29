@@ -18,7 +18,7 @@ class LocationsControllerTest < ActionController::TestCase
 
   test "should create location" do
     assert_difference('Location.count') do
-      post :create, location: { bin: @location.bin, jockey_box: @location.jockey_box, location: @location.location, tables: @location.tables, tent_type: @location.tent_type }
+      post :create, location: { bin: @location.bin, completed: @location.completed, jockey_box: @location.jockey_box, lat: @location.lat, location: @location.location, long: @location.long, notes: @location.notes, tables: @location.tables, tent_type: @location.tent_type }
     end
 
     assert_redirected_to location_path(assigns(:location))
@@ -35,7 +35,7 @@ class LocationsControllerTest < ActionController::TestCase
   end
 
   test "should update location" do
-    patch :update, id: @location, location: { bin: @location.bin, jockey_box: @location.jockey_box, location: @location.location, tables: @location.tables, tent_type: @location.tent_type }
+    patch :update, id: @location, location: { bin: @location.bin, completed: @location.completed, jockey_box: @location.jockey_box, lat: @location.lat, location: @location.location, long: @location.long, notes: @location.notes, tables: @location.tables, tent_type: @location.tent_type }
     assert_redirected_to location_path(assigns(:location))
   end
 
