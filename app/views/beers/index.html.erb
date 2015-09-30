@@ -1,18 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Beers</h1>
+<div class="page-header"><h3>Current Brew List <small>Show / hide columns dynamically</small></h3></div>
 
-<table>
-  <thead>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="#" data-column="0" class="toggle-vis btn btn-default btn-sm">Distributor</a>
+        <a href="#" data-column="1" class="toggle-vis btn btn-default btn-sm">Product</a>
+        <a href="#" data-column="2" class="toggle-vis btn btn-default btn-sm">Location</a>
+
+    </div>
+    <div class="panel-body">
+
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="toggleColumn-datatable">
+            <thead>
     <tr>
       <th>Distributor</th>
-      <th>Brewery</th>
       <th>Product</th>
-      <th>Draft</th>
-      <th>Quantity</th>
-      <th>Notes</th>
-      <th>Rep</th>
-      <th>Image</th>
       <th>Location</th>
       <th colspan="3"></th>
     </tr>
@@ -22,13 +26,7 @@
     <% @beers.each do |beer| %>
       <tr>
         <td><%= beer.distributor %></td>
-        <td><%= beer.brewery %></td>
         <td><%= beer.product %></td>
-        <td><%= beer.draft %></td>
-        <td><%= beer.quantity %></td>
-        <td><%= beer.notes %></td>
-        <td><%= beer.rep %></td>
-        <td><%= beer.image %></td>
         <td><%= beer.location %></td>
         <td><%= link_to 'Show', beer %></td>
         <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
@@ -37,7 +35,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Beer', new_beer_path %>
