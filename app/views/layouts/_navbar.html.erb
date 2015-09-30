@@ -3,7 +3,7 @@
           <div class="user text-center">
 
                 <%= image_tag("avtar/user.png", class: "img-circle") %>
-                <h4 class="user-name">Dynamic Name</h4>
+                <h4 class="user-name"><%= current_user.email %></h4>
 
                 <div class="dropdown user-login">
                 <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" aria-expanded="true">
@@ -32,7 +32,3 @@
 
   </aside>
   <!-- Aside Ends-->
-
-
-
-  
