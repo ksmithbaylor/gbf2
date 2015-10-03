@@ -9,10 +9,12 @@
 
 require 'csv'
 
+Beer.destroy_all
 CSV.foreach("db/beers.csv", { encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all}) do |row|
   Beer.create(row.to_hash)
 end
 
+Location.destroy_all
 CSV.foreach("db/locations.csv", { encoding: "UTF-8", headers: true, header_converters: :symbol, converters: :all}) do |row|
   Location.create(row.to_hash)
 end
