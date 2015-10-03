@@ -42,7 +42,9 @@
 
 <p>
   <strong>Beers at this Tent</strong>
-  
+  <% @location.beers.each do |beer| %>
+  <li><%= beer.name %></li>
+<% end %>
 </p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
