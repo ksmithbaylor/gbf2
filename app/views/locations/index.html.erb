@@ -12,17 +12,13 @@
     </div>
     <div class="panel-body">
 
-        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="toggleColumn-datatable">
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-responsive" id="toggleColumn-datatable">
             <thead>
     <tr>
       <th>Tent type</th>
-      <th>Jockey box</th>
-      <th>Bin</th>
-      <th>Tables</th>
+      
       <th>Completed</th>
-      <th>Notes</th>
-      <th>Long</th>
-      <th>Lat</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,13 +27,9 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= location.tent_type %></td>
-        <td><%= location.jockey_box %></td>
-        <td><%= location.bin %></td>
-        <td><%= location.tables %></td>
+       
         <td><%= location.completed %></td>
-        <td><%= location.notes %></td>
-        <td><%= location.long %></td>
-        <td><%= location.lat %></td>
+       
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
