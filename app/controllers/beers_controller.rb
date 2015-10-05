@@ -4,7 +4,17 @@ class BeersController < ApplicationController
   # GET /beers
   # GET /beers.json
   def index
-    @beers = Beer.all
+    @per_page = params[:per_page].to_i
+    @page_num = params[:page_num].to_i
+
+    if @per_page == 0
+      @beers = Beer.all
+    else
+      @offset = @per_page * (@page_num - 1)
+      @beers = Beer.offset(@offset).limit(@per_page)
+    end
+
+    @count = Beer.count
   end
 
   # GET /beers/1
