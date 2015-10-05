@@ -1,34 +1,37 @@
 <aside class="left-panel">
 
-          <div class="user text-center">
+  <div class="user text-center">
 
-                <%= image_tag("avtar/user.png", class: "img-circle") %>
-                <h4 class="user-name"></h4>
+    <%= image_tag("avtar/user.png", class: "img-circle") %>
+    <h4 class="user-name"></h4>
 
-                <div class="dropdown user-login">
-                <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" aria-expanded="true">
-                  <i class="fa fa-circle status-icon available"></i> Available <i class="fa fa-angle-down"></i>
-                </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                  <li role="presentation"><a role="menuitem" href="#"><i class="fa fa-circle status-icon busy"></i> Busy</a></li>
-                  <li role="presentation"><a role="menuitem" href="#"><i class="fa fa-circle status-icon invisibled"></i> Invisible</a></li>
-                  <li role="presentation"><a role="menuitem" href="#"><i class="fa fa-circle status-icon signout"></i> Sign out</a></li>
-                </ul>
-                </div>
-          </div>
+    <div class="dropdown user-login">
+      <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" aria-expanded="true">
+        <i class="fa fa-circle status-icon available"></i> Available <i class="fa fa-angle-down"></i>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" href="#"><i class="fa fa-circle status-icon busy"></i> Busy</a></li>
+        <li role="presentation"><a role="menuitem" href="#"><i class="fa fa-circle status-icon invisibled"></i> Invisible</a></li>
+        <li role="presentation"><a role="menuitem" href="#"><i class="fa fa-circle status-icon signout"></i> Sign out</a></li>
+      </ul>
+    </div>
+  </div>
 
 
 
-          <nav class="navigation">
-            <ul class="list-unstyled">
-                <li class="active"><a href="/"><i class="fa fa-bookmark-o"></i><span class="nav-label">Dashboard</span></a></li>
+  <nav class="navigation">
+    <ul class="list-unstyled">
+      <li class="<%= active_class(root_path) %>">
+        <a href="/"><i class="fa fa-bookmark-o"></i><span class="nav-label">Dashboard</span></a>
+      </li>
+      <li class="<%= active_class(beers_path) %>">
+        <a href="/beers"><i class="fa fa-code"></i> <span class="nav-label">Brews</span></a>
+      </li>
+      <li class="<%= active_class(locations_path) %>">
+        <a href="/locations"><i class="fa fa-star-o"></i> <span class="nav-label">Locations</span></a>
+      </li>
+    </ul>
+  </nav>
 
-                  <li class="menu"><a href="/beers"><i class="fa fa-code"></i> <span class="nav-label">Brews</span></a>
-                  </li>
-                  <li class="menu"><a href="/locations"><i class="fa fa-star-o"></i> <span class="nav-label">Locations</span></a>
-                  </li>
-              </ul>
-          </nav>
-
-  </aside>
-  <!-- Aside Ends-->
+</aside>
+<!-- Aside Ends-->
