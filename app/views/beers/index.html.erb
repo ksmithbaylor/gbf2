@@ -24,10 +24,11 @@
 
   <tbody>
     <% @beers.each do |beer| %>
+      <% location_name = Location.find(beer.location_id).tent_type %>
       <tr>
         <td><%= beer.distributor %></td>
         <td><%= beer.product %></td>
-        <td><%= beer.location_id %></td>
+        <td><%= link_to location_name, location_path(beer.location_id) %></td>
         <td><%= link_to 'Show', beer %></td>
         <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
         <td><%= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
