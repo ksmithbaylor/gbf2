@@ -7,6 +7,9 @@ class BeersController < ApplicationController
     @per_page = params[:per_page].to_i
     @page_num = params[:page_num].to_i
 
+    @per_page = 10 if @per_page == 0
+    @page_num = 1 if @page_num == 0
+
     if @per_page == 0
       @beers = Beer.all
     else
